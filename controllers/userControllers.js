@@ -27,7 +27,11 @@ userController.getAll = (req, res, next) => {
     crudService.getUsers().then(users => {
         res.render('list', { users });
     })
-    .catch((err) => res.status(500).send('Error loading users'));
+    .catch((err) => {
+        err.code = 500;
+        err.message = 'Oops! Hubo un error al intentar cargar usuarios.';
+        next(err)
+    });
 }
 
 /**
@@ -50,7 +54,11 @@ userController.processData = (req, res, next) => {
         crudService.addUser(req.body).then(() => {
             res.redirect('/user/list');
         })
-        .catch((err) => res.status(500).send('Error adding new user'));
+        .catch((err) => {
+            err.code = 500;
+            err.message = 'Oops! Hubo un error al intentar agregar un nuevo usuario.';
+            next(err)
+        });
     };
 }
 
@@ -67,7 +75,11 @@ userController.processData = (req, res, next) => {
  */
 userController.deleteUser = (req, res, next) => {
     crudService.deleteUser(req.params.id)
-    .catch((err) => res.status(500).send('Error deleting user'))
+    .catch((err) => {
+        err.code = 500;
+        err.message = 'Oops! Hubo un error al intentar borrar usuario.';
+        next(err)
+    });
 }
 
 /**
@@ -82,7 +94,11 @@ userController.deleteUser = (req, res, next) => {
  */
 userController.editUser = (req, res, next) => {
     crudService.editUser(req.body, req.params.id)
-    .catch((err) => res.status(500).send('Error editing user'))
+    .catch((err) => {
+        err.code = 500;
+        err.message = 'Oops! Hubo un error al intentar editar usuario.';
+        next(err)
+    });
 }
 
 module.exports = userController;

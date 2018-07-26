@@ -30,7 +30,6 @@ service.filePath = __dirname + '/../public/data/data.txt';
 */
 service.getUsers = () => new Promise((accept, reject) => {
     fs.readFile(service.filePath, 'utf-8', (err, data) => {
-        console.log(data, err)
         if(err)  return reject(err);
         accept(data.split(/\r?\n/).filter(str => str).map(JSON.parse));
     });

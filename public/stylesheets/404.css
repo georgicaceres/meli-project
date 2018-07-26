@@ -3,8 +3,9 @@
 }
 
 .error-box h1 {font-size: 5em; margin: 0 auto; font-weight: bold;}
-.error-box .status {font-size: 2em; margin: 0 auto}
-.error-box p {font-size: 1.2em; margin: 20px auto; }
+.error-box .status {font-size: 4em; margin: 0 auto}
+.error-box .status-text {margin: 0 auto}
+.error-box .status-message {font-size: 1.2em; padding: 0 2%; margin: 0 auto}
 .home-btn-link {text-align: center;}
 .home-btn {background-color: #FFC300; color: black; font-weight: bold; font-size: 1em; width: 100%}
 .home-btn:hover {background-color: black; color: #fff}

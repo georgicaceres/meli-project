@@ -1,8 +1,8 @@
 // Filter function
 $('#input-filter').keyup(function() {
-    const query = $(this).val().toLowerCase();
+    const query = $(this).val().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
     $.each($('.row'), (index, item) => {
-        if ($(item).text().toLowerCase().indexOf(query) === -1) {
+        if ($(item).text().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").indexOf(query) === -1) {
             $(item).hide();
         } else {
             $(item).show();

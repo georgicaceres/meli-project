@@ -1,7 +1,14 @@
 extends layout
 
 block content
-  if errors  
-    ul
-      for error in errors
-        li!= error.msg
+    .error-box
+        if err
+            h1.status #{err.code}
+            p.status-text #{err.message}
+        
+        if errors
+            h3.server-validation El formulario no pudo ser procesado debido a errores de validación: 
+            .server-errors-box
+                ul
+                    for error in errors
+                        li= error.msg

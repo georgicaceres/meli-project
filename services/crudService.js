@@ -30,7 +30,8 @@ service.filePath = __dirname + '/../public/data/data.txt';
 */
 service.getUsers = () => new Promise((accept, reject) => {
     fs.readFile(service.filePath, 'utf-8', (err, data) => {
-        if (err) reject(err);
+        console.log(data, err)
+        if(err)  return reject(err);
         accept(data.split(/\r?\n/).filter(str => str).map(JSON.parse));
     });
 });
@@ -49,7 +50,7 @@ service.getUsers = () => new Promise((accept, reject) => {
 */
 service.addUser = (userData) => new Promise((accept, reject) => {
     fs.appendFile(service.filePath, JSON.stringify(userData) + '\n', 'utf-8', err => {
-        if (err) reject(err);
+        if (err) return reject(err);
         accept('Ok');
     });
 });
@@ -67,7 +68,7 @@ service.addUser = (userData) => new Promise((accept, reject) => {
 */
 service.saveUsers = (users) => new Promise((accept, reject) => {
     fs.writeFile(service.filePath, users.map(user => JSON.stringify(user) + '\n').join(''), 'utf-8', err => {
-        if (err) reject(err);
+        if (err) return reject(err);
         accept('Ok');
     });
 });

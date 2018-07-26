@@ -1,0 +1,57 @@
+* { font-family: 'Varela Round', sans-serif; box-sizing: border-box;}
+
+.list-box {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+	padding: 35px;
+    border-radius: 6px;
+    background-color:#48484825;
+}
+
+.list-box h1 { font-weight: normal;}
+
+#input-filter {
+    background-image: url('../images/search.png');
+    background-position: 10px 12px; background-repeat: no-repeat; width: 100%;
+    font-size: 16px; padding: 12px 20px 12px 40px; border: 1px solid #ddd; margin-bottom: 12px;
+}
+
+#users-table {border-collapse: collapse; width: 100%; margin: 10px auto; border: none; font-size: 16px;}
+
+#users-table th, #users-table td {text-align: left; padding: 12px; font-weight: 400; cursor: default;}
+
+#users-table tr {border-bottom: 1px solid #ddd; background-color: #e6e6e6}
+
+#users-table tr.header {background-color: #fff159; border-bottom: 1px solid black; border-top: 1px solid black}
+
+.btn-action {margin: auto 5px; border: none; background-color: transparent; color: black; padding: 3px 3px;
+  font-size: 16px; cursor: pointer; border-radius: 6px}
+.btn-edit a { color: #551A8B}
+.btn-edit:hover a {color: white;}
+
+.btn-edit:hover{ background: #551A8B}
+.btn-delete{border-color: #f44336; color: #CB0505
+; padding: 3px 6px}
+.btn-delete:hover {background: #f44336; color: white;}
+
+#users-table .td-action {text-align: right;}
+.th-action, .td-action {
+    width: 100px
+}
+
+@media screen and (min-width:240px) and (max-width:800px) {
+	.list-box {
+        width: 100%;
+        padding: 13px 0;
+        margin: 0;
+    }
+    #users-table { width: 80%}
+    .th-action, .td-action {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .td-phone, .td-surname, .th-phone, .th-surname {display: none}
+}

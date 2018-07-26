@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        title Meli
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet")
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        header
+            ul.nav-box
+                li.link.new
+                    a(href='/user/form') Nuevo Usuario
+                li.link.list
+                    a(href='/user/list') Lista Usuarios
+                li.link
+                    a(href='/ping' target="_blank") Ping
+
+        block content
+        script(src='/javascripts/jquery-3.3.1.min.js')
+        script(src='/javascripts/jquery-validation/dist/jquery.validate.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js')
+        script(src='/javascripts/client-validation.js')
+        script(src='/javascripts/list.js')

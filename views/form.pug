@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    .form-box
+        h2 COMPLETÁ TUS DATOS
+        h5 Nunca compartiremos tu información personal con terceros!
+        form#registration(action='/user' method='post')
+            .input-box
+                input(class='input-form name' placeholder='Nombre' name='name' type='text' autofocus)
+            .input-box
+                input(class='input-form surname' placeholder='Apellido' name='surname' type='text')
+            .input-box
+                input(class='input-form phone' placeholder='Teléfono (opcional)' name='phone' type='text')
+            .input-box
+                input(class='input-form email' placeholder='Email' name='email' type='text')
+            button.btn-form(type='submit') ENVIAR    

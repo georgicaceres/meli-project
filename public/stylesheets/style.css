@@ -1,0 +1,56 @@
+@import url('form.css');
+@import url('list.css');
+@import url('modal.css');
+@import url('404.css');
+
+body {
+  font: 14px 'Varela Round', sans-serif;
+  background-color: #fff159;
+  margin: 0;
+  padding: 0;
+  width: 100%
+}
+
+a {text-decoration: none;}
+
+header {
+    width: 100%;
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 30px;
+}
+
+.nav-box {
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    list-style: none;
+}
+
+.link {
+  width: 33.34%;
+  min-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: #585858;
+  background-color: #ededed
+}
+
+.link:hover a {
+  color: #ffb100;
+  cursor: pointer;
+}
+
+.link.new {
+  background-color: #f9f9f9;
+}
+
+.link.list {
+  background-color: #f4f4f4;
+}

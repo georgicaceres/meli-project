@@ -1,0 +1,92 @@
+.form-box {
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 50px;
+	padding: 35px;
+    border-radius: 6px;
+    background-color:#48484825;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {margin-bottom: 5px}
+h5{margin-top: 5px; text-align: center;}
+h2, h5 {font-weight: lighter;}
+
+form {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box {
+    width: 100%;
+    height: 75px;
+    margin: 0;
+}
+
+.input-form {
+    width: 100%;
+    color:#3c3c3c;
+	font-size: 18px;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	box-sizing: border-box;
+	border: 2px solid rgba(0,0,0,0);
+    padding: 13px 13px 13px 54px;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: 13px;
+}
+
+.input-form:hover {border: 1px solid #C593F3; margin: -1px}
+.input-form:focus { border: 1px solid #551A8B; outline: none; margin: -1px}
+
+.input-form.name {background-image: url('../images/user-name.png')}
+.input-form.surname {background-image: url('../images/user-surname.png')}
+.input-form.phone {background-image: url('../images/mobile.png')}
+.input-form.email {background-image: url('../images/email.png')}
+
+.btn-form {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: #6A4D85;
+    border: none;
+    /* border: 2px solid #551A8B; */
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 4em;
+    text-decoration: none;
+    text-align: center;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+.btn-form:hover, .btn-form:focus {
+  outline: 0;
+}
+
+.btn-form:hover {
+    box-shadow: 0 0 40px 40px #551A8B inset;
+}
+
+@media screen and (min-width:240px) and (max-width:800px) {
+	.form-box {
+        width: 100%;
+        padding: 13px 0;
+        margin: 0;
+    }
+    form { width: 80%}
+}
+
+.error {
+    color: red;
+}

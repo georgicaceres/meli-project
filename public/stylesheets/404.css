@@ -1,0 +1,10 @@
+.error-box {width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    position:absolute; left:0px; top:50px; right:0px; bottom:0px; font-size: 1.2em;text-align: center;
+}
+
+.error-box h1 {font-size: 5em; margin: 0 auto; font-weight: bold;}
+.error-box .status {font-size: 2em; margin: 0 auto}
+.error-box p {font-size: 1.2em; margin: 20px auto; }
+.home-btn-link {text-align: center;}
+.home-btn {background-color: #FFC300; color: black; font-weight: bold; font-size: 1em; width: 100%}
+.home-btn:hover {background-color: black; color: #fff}

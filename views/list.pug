@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    .list-box
+        if users.length === 0
+            .message Aún no tenemos usuarios registrados, sé el primero!
+        else 
+            h1 Usuarios Registrados
+            input#input-filter(type='text' placeholder='Filtrar...')
+            table#users-table
+                thead
+                    tr.header
+                        th NOMBRE
+                        th.th-surname APELLIDO
+                        th.th-phone TELÉFONO
+                        th MAIL
+                        th.th-action 
+                tbody
+                    each user in users
+                        tr.row(id=user.id)
+                            td.td-name #{user.name}
+                            td.td-surname #{user.surname}
+                            td.td-phone #{user.phone}
+                            td.td-email #{user.email}
+                            td.td-action
+                                button.btn-action.btn-edit(data-id=user.id)
+                                    a(href='#edit-modal' rel="modal:open")
+                                        i.fas.fa-user-edit
+                                button.btn-action.btn-delete(data-id=user.id)
+                                    i.fas.fa-trash
+    .modal-box(class='modal' id='edit-modal')
+        h2 Editar usuario:
+        p
+            label NOMBRE
+            input(class='input-edit name' placeholder='Nombre' name='name' type='text' autofocus)
+        p
+            label APELLIDO
+            input(class='input-edit surname' placeholder='Apellido' name='surname' type='text')
+        p
+            label TELÉFONO       
+            input(class='input-edit phone' placeholder='Teléfono' name='phone' type='text')
+        p
+            label MAIL
+            input(class='input-edit email' placeholder='Email' name='email' type='text')
+        button(class='btn btn-save') 
+            a(href="#" rel="modal:close") GUARDAR
+        

@@ -9,3 +9,7 @@
 .home-btn-link {text-align: center;}
 .home-btn {background-color: #FFC300; color: black; font-weight: bold; font-size: 1em; width: 100%}
 .home-btn:hover {background-color: black; color: #fff}
+
+.server-validation {font-weight: normal; text-align: center; margin-bottom: 0}
+.server-errors-box {padding: 3%}
+.server-errors-box ul {text-align: left}

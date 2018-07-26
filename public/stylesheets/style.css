@@ -44,7 +44,7 @@ header {
   background-color: #ededed
 }
 
-.link:hover a {
+.link:hover, .link:hover a {
   color: #ffb100;
   cursor: pointer;
 }

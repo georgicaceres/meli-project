@@ -5,7 +5,7 @@ block content
         if users.length === 0
             .message Aún no tenemos usuarios registrados, sé el primero!
         else 
-            h1 Usuarios Registrados
+            h2 USUARIOS
             input#input-filter(type='text' placeholder='Filtrar...')
             table#users-table
                 thead
@@ -13,7 +13,7 @@ block content
                         th NOMBRE
                         th.th-surname APELLIDO
                         th.th-phone TELÉFONO
-                        th MAIL
+                        th.th-email MAIL
                         th.th-action 
                 tbody
                     each user in users

@@ -10,12 +10,14 @@ html
     body
         header
             ul.nav-box
-                li.link.new
-                    a(href='/user/form') Nuevo Usuario
-                li.link.list
-                    a(href='/user/list') Lista Usuarios
-                li.link
-                    a(href='/ping' target="_blank") Ping
+                li.link.first
+                    a(href='/user/form') NUEVO
+                li.link.scnd
+                    a(href='/user/list') LISTA
+                li.link.third
+                    a(href='/ping' target="_blank") PING
+                li.link.last
+                    a(href='/') HOME
 
         block content
         script(src='/javascripts/jquery-3.3.1.min.js')

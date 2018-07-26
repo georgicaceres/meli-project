@@ -19,7 +19,7 @@ var router = express.Router();
  * @response {html} html Render home page
  */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'MeLi Test' });
+  res.render('index', { title: 'MELI TEST' });
 });
 
 module.exports = router;

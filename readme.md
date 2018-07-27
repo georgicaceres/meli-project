@@ -1,6 +1,6 @@
 # TEST - MERCADO LIBRE
 
-Este ejercicio fue desarrollado para Mercado Libre. El proyecto está disponible [https://meli-project.herokuapp.com/](https://meli-project.herokuapp.com/) hosteado en Heroku y [https://georgicaceres.github.io/meli-project](https://georgicaceres.github.io/meli-project) se puede ver la documentación.
+Este ejercicio fue desarrollado para Mercado Libre. El proyecto está disponible en [https://meli-project.herokuapp.com/](https://meli-project.herokuapp.com/) hosteado en Heroku y en [https://georgicaceres.github.io/meli-project](https://georgicaceres.github.io/meli-project) se puede ver la documentación.
 
 ## Tabla de Contenidos
 - [Especificaciones](#especificaciones)

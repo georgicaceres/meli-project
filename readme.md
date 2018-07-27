@@ -1,10 +1,10 @@
 # TEST - MERCADO LIBRE
 
-Este ejercicio fue desarrollado para Mercado Libre. El proyecto está disponible [aqui](https://meli-project.herokuapp.com/) hosteado en Heroku y [aquí](https://georgicaceres.github.io/meli-project) se puede ver la documentación.
+Este ejercicio fue desarrollado para Mercado Libre. El proyecto está disponible [https://meli-project.herokuapp.com/](https://meli-project.herokuapp.com/) hosteado en Heroku y [https://georgicaceres.github.io/meli-project](https://georgicaceres.github.io/meli-project) se puede ver la documentación.
 
 ## Tabla de Contenidos
 - [Especificaciones](#especificaciones)
--  [Tecnologías utilizadas](#tecnologías-utilizadas)
+- [Tecnologías utilizadas](#tecnologías-utilizadas)
 - [Observaciones](#observaciones)
 - [Posibles mejoras](#posibles-mejoras)
 - [Setup](#setup)
@@ -43,8 +43,11 @@ La documentación fue generada utilizando [jsdoc](http://usejsdoc.org/) y los te
 
 ## Observaciones
 
-**SOBRE EL FORMULARIO**
-- asdasd
+- Si bien no fue especificado, en el formulario se consideraron los campos nombre, apellido y mail como requeridos, dejando el campo teléfono como opcional pero validando que, de colocarse, se admitan sólo números tal y como se indica.
+- Se incluyó en el servidor la librería [helmet](https://helmetjs.github.io/) que ayuda a proteger la app de algunas vulnerabilidades web mediante el establecimiento de headers HTTP. En este mismo sentido, el uso de jquery del lado del cliente y pug del lado del servidor para la renderización de contenido del usuario evita también otro tipo de ataques de inyección de scripting.
+- Tanto [jqueryvalidation](https://jqueryvalidation.org/) como [express-validator](https://express-validator.github.io) cuentan con métodos para validar emails que utilizan regex por detrás pero aún así se customizó esta validación en cumplimiento de la consigna y teniendo en cuenta que los mismos admiten como válidos mails incompletos, como por ejemplo "user@domain". El problema disparó la necesidad de interiorizarse sobre el uso de regex en validaciones de mails, llegando a la conclusión que no existe una regex más o menos correcta que otra y que se recomienda usar alguna básica, no tan estricta y complementar la validación con el envío de un link de confirmación/activación al mail del usario.
+- Para poder testear el middleware de express-validator de forma unitaria se requería crear requests y responses sin realizar llamadas http reales. Para tal propósito se utilizó el módulo [httpMock](http://github.com/howardabrams/node-mocks-http).
+- La implementación de los métodos editUser() y deleteUser() resulta un tanto ineficiente producto de la utilización de un archivo para el almacenamiento de datos dado que no es posible indexación alguna y por tanto acceder a un usuario determinado requiere, en el peor de los casos, recorrer todo el archivo.
 
 
 ## Posibles mejoras
@@ -52,8 +55,9 @@ La documentación fue generada utilizando [jsdoc](http://usejsdoc.org/) y los te
 - Utilizar una base de datos para la persistencia de los usuarios.
 - Integrar servicios de analytics tanto client como server side.
 - Agregar paginación para el rendering de la lista de usuarios, con un correspondiente servicio para ser llamado con AJAX.
-- Revisar usabilidad y darle mas ganas al maquetado semantico. Incorporar atributos de ARIA.
 - Validación server y client side para la edición de usuarios en la vista de lista.
+- No volver a cargar el archivo con cada request sino mantener una copia en memoria.
+- Mejorar los estilos. Utilizar less/sass.
 
 ## Setup
 

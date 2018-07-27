@@ -60,7 +60,7 @@ userController.processData = (req, res, next) => {
             next(err)
         });
     };
-}
+};
 
 
 /**
@@ -80,7 +80,7 @@ userController.deleteUser = (req, res, next) => {
         err.message = 'Oops! Hubo un error al intentar borrar usuario.';
         next(err)
     });
-}
+};
 
 /**
  * AJAX controller to edit a user
@@ -99,6 +99,6 @@ userController.editUser = (req, res, next) => {
         err.message = 'Oops! Hubo un error al intentar editar usuario.';
         next(err)
     });
-}
+};
 
 module.exports = userController;
